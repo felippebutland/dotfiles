@@ -1,0 +1,41 @@
+# Configuração do Spaceship Prompt
+SPACESHIP_PROMPT_ORDER=(
+  user
+  dir
+  host
+  git
+  exec_time
+  line_sep
+  battery
+  jobs
+  exit_code
+)
+SPACESHIP_PROMPT_ADD_NEWLINE=false
+SPACESHIP_CHAR_SYMBOL="❯"
+SPACESHIP_CHAR_SUFFIX=" "
+
+# Configuração do Zsh Autosuggestions
+if ! command -v brew &> /dev/null; then
+    echo "Brew não está instalado, instalando ..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+if ! command -v git &> /dev/null; then
+    echo "Git não está instalado, instalando ..."
+    brew install git
+fi
+
+if [[ ! -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
+    echo "Zsh Autosuggestions não está instalado, instalando ..."
+    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+fi
+
+# Configuração do Zsh Plugins
+export ZSH="/usr/local/share/zsh"
+
+plugins=(
+  git
+  zsh-autosuggestions
+)
+
+source $ZSH/oh-my-zsh.sh
