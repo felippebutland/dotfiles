@@ -3,10 +3,17 @@
 # Instalar o Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# Instalar o cask oficial logitech
+brew tap homebrew/cask-drivers
+
+# instalar o git
 brew install git
 
-# Instalar o Visual Studio Code, Fig, iTerm2, Rectangle e Mactex
-brew install --cask visual-studio-code fig iterm2 rectangle mactex google-chrome hoppscotch 
+# Instalar o Visual Studio Code, Fig, iTerm2, Rectangle, Mactex, google Chrome, hoppScotch & discord
+brew install --cask visual-studio-code fig iterm2 rectangle mactex google-chrome hoppscotch discord
+
+# instalar logitech options +
+brew install --cask logitech-options
 
 # Instalar a fonte JetBrains Mono
 brew tap homebrew/cask-fonts
