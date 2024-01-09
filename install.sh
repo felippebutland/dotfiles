@@ -9,8 +9,8 @@ brew tap homebrew/cask-drivers
 # instalar o git
 brew install git
 
-# Instalar o Visual Studio Code, Fig, iTerm2, Rectangle, Mactex, google Chrome, hoppScotch & discord
-brew install --cask visual-studio-code fig iterm2 rectangle mactex google-chrome hoppscotch discord
+# Instalar o iTerm2, Rectangle, Mactex, google Chrome, hoppScotch & discord
+brew install --cask iterm2 rectangle mactex google-chrome hoppscotch discord
 
 # instalar logitech options +
 brew install --cask logitech-options
@@ -21,5 +21,3 @@ brew install --cask font-jetbrains-mono
 
 # Copiar o arquivo settings.json para o diretório de configuração do VS Code
 cp /settings/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
-
-cp /settings/fig/.figrc ~/.figrc
